@@ -22,5 +22,7 @@ Route::get('/login', function() { return 'Login'; })->name('site.login');
 
 Route::prefix('/app')->group(function(){
     Route::get('/cargos', 'CargosController@cargos')->name('app.cargos');
+    Route::post('/cargos', 'CargosController@cargos')->name('app.cargos');
     Route::get('/autoridades', 'AutoridadesController@autoridades')->name('app.autoridades');
+    Route::post('/autoridades', 'AutoridadesController@autoridades')->name('app.autoridades');
 });

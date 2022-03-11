@@ -15,6 +15,14 @@ class CreateAppAutoridadesTable extends Migration
     {
         Schema::create('app_autoridades', function (Blueprint $table) {
             $table->id();
+            $table->integer('precendencia',50);
+            $table->string('cargo',50);
+            $table->string('local_de_trabalho',50);
+            $table->string('nome',50);
+            $table->string('representando',50);
+            $table->string('cargo_principal',50);
+            $table->string('nome_principal',50);
+            $table->string('foto',50);
             $table->timestamps();
         });
     }

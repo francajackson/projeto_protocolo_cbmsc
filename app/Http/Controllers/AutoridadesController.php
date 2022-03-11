@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AutoridadesController extends Controller
 {
     public function autoridades() {
-        return view('app.autoridades');
+        return view('app.autoridades', ['titulo' => 'Autoridades']);
     }
 }

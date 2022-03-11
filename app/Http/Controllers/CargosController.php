@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class CargosController extends Controller
 {
     public function cargos() {
-        return view('app.cargos');
+
+       //var_dump($_POST);
+        return view('app.cargos', ['titulo' => 'Cargos']);
     }
 }

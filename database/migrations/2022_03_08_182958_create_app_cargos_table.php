@@ -16,6 +16,8 @@ class CreateAppCargosTable extends Migration
         Schema::create('app_cargos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('precedencia');
+            $table->string('cargo',50);
         });
     }
 
