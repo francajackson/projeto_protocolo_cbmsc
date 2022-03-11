@@ -19,10 +19,10 @@ class CreateAppAutoridadesTable extends Migration
             $table->string('cargo',50);
             $table->string('local_de_trabalho',50);
             $table->string('nome',50);
-            $table->string('representando',50);
-            $table->string('cargo_principal',50);
-            $table->string('nome_principal',50);
             $table->string('foto',50);
+            $table->string('representando',50)->nullable;
+            $table->string('cargo_principal',50)->nullable;
+            $table->string('nome_principal',50)->nullable;
             $table->timestamps();
         });
     }
