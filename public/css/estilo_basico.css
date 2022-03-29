@@ -131,6 +131,12 @@ button:hover {
     margin: 0px 60px 60px 40px;
 }
 
+.cadastro {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .chamada {
     margin-top: 30px;
     margin-left: 20px;
@@ -158,6 +164,13 @@ button:hover {
     text-align: center;
 }
 
+.titulo-pagina-2 {
+    padding: 70px 0px 10px 0px;
+    margin-bottom: 10px;
+    background-color: #2a9ee2;
+    text-align: center;
+}
+
 .informacao-pagina {
     text-align: center;
     margin-top: 30px;
@@ -171,19 +184,12 @@ button:hover {
     width: 100%;
 }
 
-.redes-sociais, .area-contato, .localizacao {
-    width: 33.333%;
-    border-top:solid 1px #ccc;
-    float: left;
-    text-align: center;
-    background-color: #f8f8f8;
-    height: 250px;
+.pagination li {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.redes-sociais, .area-contato, .localizacao p, span {
-    color: #333333;
-}
-
-.redes-sociais img {
-    margin: 0px 15px 0px 15px;
+.pagination ul {
+    list-style-type: none;
 }

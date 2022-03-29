@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppCargosTable extends Migration
+class CreateCargosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateAppCargosTable extends Migration
      */
     public function up()
     {
-        Schema::create('app_cargos', function (Blueprint $table) {
+        Schema::create('cargos', function (Blueprint $table) {
             $table->id();
+            $table->string('precedencia')->unique();
+            $table->string('cargo', 100)->unique();
             $table->timestamps();
-            $table->integer('precedencia');
-            $table->string('cargo',50);
+            $table->softDeletes();
         });
     }
 
@@ -28,6 +29,6 @@ class CreateAppCargosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_cargos');
+        Schema::dropIfExists('cargos');
     }
 }

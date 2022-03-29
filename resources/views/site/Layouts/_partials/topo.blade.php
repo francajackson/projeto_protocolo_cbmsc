@@ -7,8 +7,8 @@
     <div class="menu">
         <ul>
             <li><a href="{{ route('site.index') }}">Home</a></li>
-            <li><a href="{{ route('app.autoridades') }}">Autoridades</a></li>
-            <li><a href="{{ route('app.cargos') }}">Cargos</a></li>
+            <li><a href="{{ route('autoridade.index') }}">Autoridades</a></li>
+            <li><a href="{{ route('cargo.index') }}">Cargos</a></li>
         </ul>
     </div>
 </div>
