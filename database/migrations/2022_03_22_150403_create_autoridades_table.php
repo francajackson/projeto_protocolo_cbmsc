@@ -15,13 +15,19 @@ class CreateAutoridadesTable extends Migration
     {
         Schema::create('autoridades', function (Blueprint $table) {
             $table->id();
+            $table->string('protocolo')->nullable();
             $table->string('precedencia',50)->unique();
             $table->string('cargo_aut')->unique();
             $table->string('nome',50);
             $table->string('foto')->nullable();
+            $table->string('representando')->nullable();
+            $table->string('precedencia_principal',50)->unique()->nullable();
+            $table->string('cargo_principal')->nullable();
+            $table->string('nome_principal')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('cargo_aut')->references('cargo')->on('cargos');
+            $table->foreign('cargo_principal')->references('cargo_aut')->on('autoridades');
         });
     }
 

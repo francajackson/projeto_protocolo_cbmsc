@@ -17,16 +17,12 @@
             <div class="cadastro">
                 <table border="1" style="text-align: left">
                     <tr>
-                        <td>ID:</td>
-                        <td>{{ $autoridade->id }}</td>
-                    </tr>
-                    <tr>
                         <td>Precendência:</td>
                         <td>{{ $autoridade->precedencia }}</td>
                     </tr>
                     <tr>
                         <td>Cargo:</td>
-                        <td>{{ $autoridade->cargo }}</td>
+                        <td>{{ $autoridade->cargo_aut }}</td>
                     </tr>
                     <tr>
                         <td>Nome:</td>
@@ -39,6 +35,22 @@
                             <img src="{{ url("storage/{$autoridade->foto}") }}" alt="{{ $autoridade->nome }}">    
                             @endif
                         </td>
+                    </tr>
+                    <tr>
+                        <td>Representando?</td>
+                        <td>{{ $autoridade->representando }}</td>
+                    </tr>
+                    <tr>
+                        <td>Precendência:</td>
+                        <td>{{ $autoridade->precedencia_principal }}</td>
+                    </tr>
+                    <tr>
+                        <td>Cargo:</td>
+                        <td>{{ $autoridade->cargo_principal }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nome:</td>
+                        <td>{{ $autoridade->nome_principal }}</td>
                     </tr>
                 </table>
             </div>

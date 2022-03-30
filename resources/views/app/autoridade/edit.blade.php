@@ -16,7 +16,7 @@
 
         <div class="informacao-pagina">
             <div class="cadastro">
-                @component('app.autoridade._components.form_create_edit', ['autoridade' => $autoridade, 'cargos' => $cargos])
+                @component('app.autoridade._components.form_create_edit', ['autoridade' => $autoridade, 'autoridades' =>$autoridades, 'cargos' => $cargos])
                 @endcomponent
             </div>
         </div>  

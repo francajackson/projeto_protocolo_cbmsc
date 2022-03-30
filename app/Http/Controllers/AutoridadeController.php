@@ -45,7 +45,7 @@ class AutoridadeController extends Controller
         $regras = [
             'precedencia' => 'required|unique:autoridades|max:40',
             'cargo_aut'=>'unique:autoridades|exists:cargos,cargo',
-            'nome'=>'unique:autoridades'
+            'nome'=>'required|unique:autoridades'
         ];
 
         $feedback = [
@@ -90,8 +90,9 @@ class AutoridadeController extends Controller
      */
     public function edit(Autoridade $autoridade)
     {
+        $autoridades = Autoridade::all();
         $cargos = Cargo::all();
-        return view('app.autoridade.edit',['autoridade' => $autoridade, 'cargos' => $cargos]);
+        return view('app.autoridade.edit',['autoridade' => $autoridade, 'autoridades' => $autoridades, 'cargos' => $cargos]);
     }
 
     /**

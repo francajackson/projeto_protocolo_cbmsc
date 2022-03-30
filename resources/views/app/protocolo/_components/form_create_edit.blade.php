@@ -7,7 +7,13 @@
     <form method="post" enctype="multipart/form-data" action= "{{ route('protocolo.store') }}">
         @csrf
 @endif
-    
+
+    <label for="">Protocolo Confirmado?</label>
+    <input type="checkbox" name="protocolo" value="s" class="borda-preta">
+    <br>
+    @if($errors->has('protocolo'))
+        {{ $errors->first('protocolo') }}
+    @endif
 
     <input type="text" name="precedencia" value="{{ $autoridade->precedencia ?? old('precedencia') }}" placeholder="Precedência" class="borda-preta">
     <br>
@@ -39,10 +45,16 @@
     @endif
 
     <label for="">Representando?</label>
-    <input type="checkbox" name="representando" value="{{ $autoridade->representando ?? old('representando') }}" class="borda-preta">
+    <input type="checkbox" name="representando" value="s" class="borda-preta">
     <br>
     @if($errors->has('representando'))
         {{ $errors->first('representando') }}
+    @endif
+
+    <input type="text" name="precedencia_principal" value="{{ $autoridade->precedencia ?? old('precedencia_principal') }}" placeholder="Precedência" class="borda-preta">
+    <br>
+    @if($errors->has('precedencia_principal'))
+        {{ $errors->first('precedencia_principal') }}
     @endif
 
     <select name="cargo_principal" class="borda-preta">
